@@ -1,10 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate
+  
   def invalid_url
-  end
-
-  def unauthenticated
-  end
-
-  def unauthorized
   end
 end

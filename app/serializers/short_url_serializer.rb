@@ -16,5 +16,5 @@
 #
 
 class ShortUrlSerializer < ActiveModel::Serializer
-  attributes :id, :original, :converted, :count
+  attributes :id, :original, :converted, :count, :created_at
 end

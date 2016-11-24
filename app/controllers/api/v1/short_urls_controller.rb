@@ -1,6 +1,5 @@
 module Api::V1
   class ShortUrlsController < ApplicationController
-    before_action :set_short_url, only: [:show, :update, :destroy]
     load_and_authorize_resource
 
     # GET api/v1/short_urls.json

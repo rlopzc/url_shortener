@@ -1,4 +1,6 @@
 class RedirectionsController < ApplicationController
+  skip_before_action :authenticate
+  
   def redirect
     # Obtener la url corta
     @short_url = ShortUrl.find_by(converted: request.original_url)

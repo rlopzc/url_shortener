@@ -1,5 +1,5 @@
 module Api::V1
-  class ShortUrlsController < ApplicationController
+  class ShortUrlsController < ApiController
     load_and_authorize_resource
 
     # GET api/v1/short_urls.json
@@ -24,7 +24,7 @@ module Api::V1
       @short_url = @current_user.short_urls.new(short_url_params)
 
       if @short_url.save
-        render json: @short_url
+        render json: @short_url, status: :created
       else
         render json: @short_url.errors, status: :unprocessable_entity
       end

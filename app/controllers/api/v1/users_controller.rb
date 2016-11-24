@@ -1,5 +1,5 @@
 module Api::V1
-  class UsersController < ApplicationController
+  class UsersController < ApiController
     skip_before_action :authenticate, only: :create
     # POST /users.json
     def create

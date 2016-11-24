@@ -15,6 +15,7 @@
 FactoryGirl.define do
   factory :user do
     name "MyString"
-    password_digest "MyString"
+    password 'romario'
+    password_confirmation 'romario'
   end
 end

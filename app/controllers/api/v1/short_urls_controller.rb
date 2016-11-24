@@ -15,9 +15,9 @@ module Api::V1
     # POST api/v1/short_urls.json
     def create
       if short_url_params[:converted].blank?
-        params[:short_url][:converted] = "http://localhost/#{ShortUrl.generate}"
+        params[:short_url][:converted] = "http://#{request.host_with_port}/b/#{ShortUrl.generate}"
       else
-        params[:short_url][:converted] = "http://localhost/#{params[:short_url][:converted]}"
+        params[:short_url][:converted] = "http://#{request.host_with_port}/b/#{params[:short_url][:converted]}"
       end
 
       @short_url = ShortUrl.new(short_url_params)

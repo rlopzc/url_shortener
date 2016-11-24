@@ -20,7 +20,8 @@ class ShortUrl < ApplicationRecord
 
   validates_uniqueness_of :converted
   validates_presence_of :original, :converted
-  
+  validates :original, :url => true
+
   def self.generate
     loop do
       random = SecureRandom.base64.tr('+/=', 'Qrt')

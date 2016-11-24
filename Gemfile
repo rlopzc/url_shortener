@@ -60,3 +60,4 @@ gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'active_model_serializers'
 gem 'cancancan', '~> 1.10'
+gem "validate_url"
